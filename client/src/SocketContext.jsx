@@ -21,7 +21,7 @@ const ContextProvider = ({ children }) => {
 
     useEffect(() => {
         //getting a request to access a audio and video
-        navigator.mediaDevices.getUserMedia({ video: true, audio: true })
+        navigator.mediaDevices.getUserMedia({ video: true, audio: false })
             .then((currentStream) => {
                 setStream(currentStream);
 

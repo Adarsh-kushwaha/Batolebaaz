@@ -1,0 +1,18 @@
+.container {
+    max-width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+}
+
+.video{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.video p{
+    margin: 14px 14px;
+    font-weight: 700;
+    font-size: 18px;
+}
