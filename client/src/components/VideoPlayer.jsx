@@ -6,7 +6,8 @@ import classes from "./VideoPlayer.module.css"
 const VideoPlayer = () => {
 
   const { myVideo, callerVideo, name, call, stream, callAccepted, callEnded } = useContext(SocketContext);
-
+  console.log(callerVideo);
+  console.log(myVideo)
   return (
 
     <div className={classes.container}>
@@ -15,9 +16,9 @@ const VideoPlayer = () => {
         <p>{name || 'User Name'}</p>
       </div>
 
-      {callAccepted && !callEnded && (
+      {callAccepted && (
         <div className={classes.video}>
-          <video playsInline ref={callerVideo} autoPlay style={{ width: "550px", height: "400px", }} />
+          <video playsInline ref={callerVideo} autoPlay style={{ width: "550px", height: "400px" }} />
           <p>{call.name || 'Caller Name'}</p>
         </div>
       )}
